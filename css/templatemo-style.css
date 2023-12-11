@@ -879,6 +879,10 @@ footer .social-icon {
   .custom-navbar .navbar-nav.navbar-nav-first {
     margin-left: inherit;
   }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
 }
 
 
@@ -1206,7 +1210,7 @@ tr:hover {
   background-color: #F5F5F5;
 }
 
-button#btn-username{
+button#btn-username {
   background: #34495e;
   border-radius: 0;
   border: 0;
@@ -1217,3 +1221,10 @@ button#btn-username{
   transition: 0.5s 0.2s;
   display: none;
 }
+
+/* 在小屏幕上允许表格内容滚动 */
+/* @media screen and (max-width: 767px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+} */
