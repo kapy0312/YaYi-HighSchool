@@ -1039,3 +1039,181 @@ footer .social-icon {
   height: 50px;
   /* 可根据需求设置高度 */
 }
+
+/*---------------------------------------
+      SIGNUP             
+  -----------------------------------------*/
+
+#signup {
+  background: #F0F0F0;
+}
+
+#signup .section-title {
+  padding-bottom: 0;
+}
+
+#signup .text-success,
+#signup .text-danger {
+  display: none;
+}
+
+#signup .form-control {
+  background: transparent;
+  /* background: #f9f9f9; */
+  border: 0;
+  /* border-bottom: 1px solid #dddddd; */
+  border-bottom: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  transition: all ease-in-out 0.4s;
+}
+
+#signup .form-control:hover,
+#signup .form-control:focus {
+  border-bottom-color: #c9c9c9;
+  border-bottom-color: #FF0000;
+}
+
+#signup input {
+  height: 55px;
+}
+
+#signup button#cf-submit {
+  background: #ce3232;
+  border-radius: 0;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  height: 50px;
+}
+
+#signup button#cf-submit:hover {
+  background: #292929;
+  color: #ffffff;
+}
+
+/* #signup select {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    width: 25%;
+    height: 55px; 
+    transition: all ease-in-out 0.4s;
+}
+
+#signup select:hover,
+#signup select:focus {
+    border-bottom-color: #FF0000; 
+}*/
+
+#signup button#cf-signupsubmit {
+  background: #ce3232;
+  border-radius: 0;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  width: 50%;
+  height: 50px;
+}
+
+#login-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#login-box {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#VeiwDataTable {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+select {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #000000;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  width: 25%;
+  height: 55px;
+  transition: all ease-in-out 0.4s;
+  /* text-align: right; */
+}
+
+select:hover,
+select:focus {
+  /* border-bottom-color: #c9c9c9; */
+  border-bottom-color: #FF0000;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #DDD;
+}
+
+th {
+  background-color: #F2F2F2;
+}
+
+tr:hover {
+  background-color: #F5F5F5;
+}
+
+button#btn-username{
+  background: #34495e;
+  border-radius: 0;
+  border: 0;
+  color: #f9f9f9;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 10px 25px;
+  transition: 0.5s 0.2s;
+  display: none;
+}

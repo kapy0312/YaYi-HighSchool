@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* 添加一些基本的樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #login-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="login-container">
+    <h2>Login</h2>
+    <form onsubmit="submitForm(); return false;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    function submitForm() {
+        // 获取用户名和密码的值
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // 在这里可以添加验证逻辑
+
+        // 简单的示例：如果用户名为 "user"，密码为 "password"，则登录成功
+        if (username === 'user' && password === 'password') {
+            alert('Login successful!');
+            // 在这里可以执行登录成功后的操作
+        } else {
+            alert('Login failed. Please check your username and password.');
+        }
+    }
+</script>
+
+</body>
+</html>

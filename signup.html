@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>雅一高中班</title>
+     <!-- 
+
+Eatery Cafe Template 
+
+http://www.templatemo.com/tm-515-eatery
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/templatemo-style.css">
+     <!-- 動態載入HTML功能 -->
+     <!-- <script defer src="js/Script_Initialization.js"></script> -->
+     <script>
+          var google_apps_script_url = "https://script.google.com/macros/s/AKfycbyezzHqF2Sfjl2CF1g9rTsmZLQIvNinhVOX18GYa4NBi7P2zWJLmHccmnKiGcdObw_D/exec";
+          var userName="";
+          var userBirthday="";
+     </script>
+     <script src="https://kit.fontawesome.com/a20b53ca04.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">雅一 <span>.</span> 高中班</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index.html#home" class="smoothScroll">首頁</a></li>
+                         <li><a href="index.html#about" class="smoothScroll">關於我們</a></li>
+                         <li><a href="index.html#team" class="smoothScroll">幹部群</a></li>
+                         <li><a href="index.html#menu" class="smoothScroll">點點滴滴</a></li>
+                         <li><a href="index.html#contact" class="smoothScroll">聯絡我們</a></li>
+                         <li><a href="signup.html" class="smoothScroll">報名系統</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                         <!-- <li><a href="#">Call Now! <i class="fa fa-phone"></i> 010 020 0340</a></li> -->
+                         <!-- <a href="#footer" class="section-btn">Find us</a> -->
+                         <button id="cf-login" class="section-btn" onclick="openLoginBox()">報名查詢</button>
+                         <button id="btn-username"></button>
+                         <!-- <div id="div_username">
+                              <label id="username1">你好啊!! </label>
+                              <label id="username2"></label>
+                         </div> -->
+                         <!-- <li><a href="index.html#home" class="smoothScroll">首頁</a></li> -->
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+     <img src="images/SignUp/TilteBar2.png" class="img-responsive" alt="">
+
+     <!-- signup -->
+     <section id="signup" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <!-- <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
+                         <div id="google-map">
+                              <img src="images/Map/yo-img-01.png" class="img-responsive" alt="">
+                         </div>
+                    </div> -->
+
+                    <div class="col-md-6 col-sm-12">
+                         <!-- <div style="background-image: url('images/SignUp/TilteBar2.png');"> -->
+                         <div class="col-md-12 col-sm-12">
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                                   <h2>報名系統</h2>
+                              </div>
+                         </div>
+
+                         <!-- signup FORM -->
+                         <form class="wow fadeInUp" id="signup-form" role="form" data-wow-delay="0.8s">
+                              <!-- <form data-wow-delay="0.8s"> -->
+
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="text" class="form-control" id="cf-name" name="name" placeholder="姓名">
+                              </div>
+
+
+                              <div class="col-md-6 col-sm-6">
+                                   <!-- <input type="text" class="form-control" id="cf-name" name="name" placeholder="性別"> -->
+                                   <select id="cf-gender" name="gender" required>
+                                        <!-- 年份選擇 -->
+                                        <option value="" disabled selected>性別</option>
+                                        <option value="男">男</option>
+                                        <option value="女">女</option>
+                                   </select>
+                              </div>
+
+
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="text" class="form-control" id="cf-school" name="name" placeholder="學校">
+                              </div>
+
+                              <div class="col-md-2 col-sm-2">
+                                   <input type="text" class="form-control" id="cf-grade" name="name" placeholder="年級">
+                              </div>
+
+                              <div class="col-md-12 col-sm-12">
+                                   <!-- <label  style="font-size: 16px;">出生日期</label> -->
+                                   <select id="cf-year" name="year" required>
+                                        <!-- 年份選擇 -->
+                                        <option value="" disabled selected>出生年份</option>
+                                   </select>
+                                   <select id="cf-month" name="month" required>
+                                        <!-- 月份選擇 -->
+                                        <option value="" disabled selected>出生月份</option>
+                                   </select>
+                                   <select id="cf-day" name="day" required>
+                                        <!-- 日選擇 -->
+                                        <option value="" disabled selected>出生日期</option>
+                                   </select>
+                              </div>
+
+                              <div class="col-md-8 col-sm-8">
+                                   <input type="tel" class="form-control" id="cf-tel" name="email" placeholder="電話">
+                              </div>
+
+                              <div class="col-md-8 col-sm-8">
+                                   <input type="text" class="form-control" id="cf-conper" name="email"
+                                        placeholder="聯絡人">
+                              </div>
+
+                              <div class="col-md-8 col-sm-8">
+                                   <input type="tel" class="form-control" id="cf-conpertel" name="email"
+                                        placeholder="聯絡人電話">
+                              </div>
+
+                              <div class="col-md-8 col-sm-8">
+                                   <p><br><br></p>
+                              </div>
+
+                              <div class="col-md-6 col-sm-6">
+                                   <button id="cf-signupsubmit" name="signupsubmit">送出資料</button>
+                              </div>
+                         </form>
+                    </div>
+
+                    <!-- <div class="col-md-12 col-sm-12">
+                    <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
+
+                    <textarea class="form-control" rows="6" id="cf-message" name="message"
+                         placeholder="Tell about your project"></textarea>
+               </div> -->
+
+                    <div class="wow fadeInUp col-md-6 col-sm-12" data-wow-delay="0.4s">
+                         <div id="">
+                              <img src="images/SignUp/yo-img-01.png" class="img-responsive" alt="">
+                         </div>
+                    </div>
+
+               </div>
+
+          </div>
+
+          <!-- <div class="container">
+               <button id="cf-submit" name="EmailSubmit">送出郵件</button>
+          </div> -->
+
+     </section>
+
+     <div id="overlay">
+          <div id="login-box">
+
+               <form id="loginform" onsubmit="submitForm(); return false;">
+                    <!-- <label for="username">Username:</label> -->
+                    <!-- <input class="form-control" type="text" id="username" placeholder="Username" required>-->
+                    <div class="col-md-12 col-sm-12">
+                         <h2>報名查詢</h2>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                         <input type="text" class="form-control" id="cf-loginname" name="loginname" placeholder="姓名">
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                         <select id="cf-loginyear" name="loginyear" required>
+                              <!-- 年份選擇 -->
+                              <option value="" disabled selected>出生年份</option>
+                         </select>
+                         <select id="cf-loginmonth" name="loginmonth" required>
+                              <!-- 月份選擇 -->
+                              <option value="" disabled selected>出生月份</option>
+                         </select>
+                         <select id="cf-loginday" name="loginday" required>
+                              <!-- 日選擇 -->
+                              <option value="" disabled selected>出生日期</option>
+                         </select>
+                    </div>
+                    <br>
+                    <!-- <label for="password">Password:</label> -->
+                    <!-- <input class="form-control" type="password" id="password" placeholder="Password" required> -->
+                    <br>
+                    <div class="col-md-6 col-sm-6">
+                         <button class="section-btn" type="submit">查詢</button>
+                         <button class="section-btn" onclick="closeLoginBox()">關閉</button>
+                    </div>
+               </form>
+          </div>
+     </div>
+
+     <div id="VeiwDataTable">
+          <div id="login-box">
+               <h2>檢視-報名資料庫　<a
+                         href="https://docs.google.com/spreadsheets/d/1HvjY0Dhjmp4eJNuMZU7lzidDdmL4T9OcqyyF22SBm4A/edit#gid=0"
+                         target="_blank" class="fa-solid fa-arrow-up-right-from-square fa-lg"></a></h2>
+               <form>
+                    <table id="data-table">
+                         <thead>
+                              <!-- <tr>
+                              <th>姓名</th>
+                              <th>性別</th>
+                              <th>學校</th>
+                              <th>年級</th>
+                              <th>出生日期</th>
+                              <th>電話</th>
+                              <th>聯絡人</th>
+                              <th>聯絡人電話</th>
+                         </tr> -->
+                         </thead>
+
+                         <tbody>
+                              <!-- 数据将在此处呈现 -->
+                         </tbody>
+                    </table>
+
+                    <button class="section-btn" onclick="closeVeiwDataTable()">Close</button>
+               </form>
+          </div>
+     </div>
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-3 col-sm-8">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">找到我們</h2>
+                              </div>
+                              <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>南投慈航宮<br>地址：<br> 540南投縣南投市樂利路99巷369號</p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-8">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">聯絡資訊</h2>
+                              </div>
+                              <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>090-070-0430(待提供)</p>
+                                   <p><a href="https://kapy0312.github.io/YaYi-HighSchool/">雅一高中班-官網</a></p>
+                                   <p>LINE: eatery247(待提供)</p>
+                              </address>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-8">
+                         <div class="footer-info footer-open-hour">
+                              <div class="section-title">
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">上課時間</h2>
+                              </div>
+                              <div class="wow fadeInUp" data-wow-delay="0.4s">
+                                   <p>每個月2次 / 隔週的禮拜日</p>
+                                   <div>
+                                        <strong>歡樂時段</strong>
+                                        <p>8:00 AM - 12:00 AM</p>
+                                   </div>
+                                   <div>
+                                        <strong>歡迎回來</strong>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4">
+                         <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                              <li><a href="https://www.facebook.com/groups/253719377991980/"
+                                        class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                              <li><a href="https://www.instagram.com/kun_young.2020/" class="fa fa-instagram"
+                                        style="color:rgb(55, 137, 159)"></a></li>
+                              <li><a href="https://www.instagram.com/veghashtag99/" class="fa fa-instagram"></a></li>
+                              <li><a href="https://www.google.com.tw" class="fa fa-google"></a></li>
+                         </ul>
+
+                         <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s">
+                              <p><br>Copyright &copy; 2023 <br>發一崇德台中道場<br>雅一高中班
+
+                                   <br><br>Design: <a rel="nofollow" href="http://templatemo.com"
+                                        target="_parent">TemplateMo</a>
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <button class="invisible-button" onclick="handleButtonClick()"></button>
+     <script>
+          // 处理按钮点击事件的JavaScript代码
+          function handleButtonClick() {
+               alert('按钮被点击了！');
+               // 在这里添加更多的处理逻辑
+          }
+     </script>
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/Script_SignUp.js"></script>
+
+     <script>
+          // 動態生成年份選項
+          var yearSelect = document.getElementById("cf-year");
+          var loginyearSelect = document.getElementById("cf-loginyear");
+          var currentYear = new Date().getFullYear();
+          for (var year = currentYear; year >= 1900; year--) {
+               var option = document.createElement("option");
+               option.value = year;
+               option.text = year;
+               yearSelect.add(option);
+               option = document.createElement("option");
+               option.value = year;
+               option.text = year;
+               loginyearSelect.add(option);
+          }
+
+          // 動態生成月份選項
+          var monthSelect = document.getElementById("cf-month");
+          var loginmonthSelect = document.getElementById("cf-loginmonth");
+          for (var month = 1; month <= 12; month++) {
+               var option = document.createElement("option");
+               option.value = month;
+               option.text = month;
+               monthSelect.add(option);
+               option = document.createElement("option");
+               option.value = month;
+               option.text = month;
+               loginmonthSelect.add(option);
+          }
+
+          // 動態生成日期選項
+          var daySelect = document.getElementById("cf-day");
+          var logindaySelect = document.getElementById("cf-loginday");
+          for (var day = 1; day <= 31; day++) {
+               var option = document.createElement("option");
+               option.value = day;
+               option.text = day;
+               daySelect.add(option);
+               option = document.createElement("option");
+               option.value = day;
+               option.text = day;
+               logindaySelect.add(option);
+          }
+     </script>
+
+</body>
+
+</html>

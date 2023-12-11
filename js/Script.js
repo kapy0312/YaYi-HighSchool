@@ -14,7 +14,7 @@ $('#cf-submit').on('click', function () {
     // Email_Address = "kapy0312@gmail.com"
 
     $.ajax({
-        url: 'https://script.google.com/macros/s/AKfycbyHTYBLQo2KuWO8Hjo5emJnN4m3FtxVMrla1lX6OYlaQK1lVFFPT3Kmp7cIDn9gGFTb/exec',
+        url: google_apps_script_url,
         type: 'POST',
         dataType: 'text',
         data: JSON.stringify({ DataArray: DataArray }),
