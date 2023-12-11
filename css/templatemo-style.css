@@ -880,9 +880,9 @@ footer .social-icon {
     margin-left: inherit;
   }
 
-  .table-responsive {
+  /* .table-responsive {
     overflow-x: auto;
-  }
+  } */
 }
 
 
@@ -1210,6 +1210,40 @@ tr:hover {
   background-color: #F5F5F5;
 }
 
+/* 固定列头的容器 */
+.table-container {
+  max-width: 400px;
+  max-height: 400px;
+  /* 设置表格容器的最大高度 */
+  overflow-y: auto; /* 允许在垂直方向上滚动 */
+  overflow-x: auto; /* 允许在水平方向上滚动 */
+}
+
+/* 表格头部固定 */
+.table-container thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+}
+
+/* 表格样式 */
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-container table,
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+}
+
+.table-container th,
+.table-container td {
+  padding: 8px;
+  text-align: left;
+}
+
 button#btn-username {
   background: #34495e;
   border-radius: 0;
@@ -1223,8 +1257,8 @@ button#btn-username {
 }
 
 /* 在小屏幕上允许表格内容滚动 */
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .table-responsive {
     overflow-x: auto;
   }
-} */
+}
