@@ -186,7 +186,7 @@ function LoginResponseResults(data) {
         $('#cf-conpertel').val(dataArray[7].replace(/"/g, ''));
 
         $('#btn-username').show();
-        $('#btn-username').text($('#cf-name').val());
+        $('#btn-username').text($("您好阿!! " + '#cf-name').val() + "🐸🐸");
         userName = $('#cf-name').val();
         userBirthday = dataArray[4];
         $('#cf-signupsubmit').text("修改資料");
