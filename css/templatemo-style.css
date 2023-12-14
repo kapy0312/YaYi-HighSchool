@@ -8,12 +8,32 @@ http://www.templatemo.com/tm-515-eatery
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@font-face {
+  font-family: 'GenSenRounded-H';
+  src: url('../fonts/GenSenRounded-H.ttc') format('truetype');
+  font-weight: normal;  /* 或者 font-weight: bold; 根據需要 */
+  font-style: normal;   /* 或者 font-style: italic; 根據需要 */
+}
+
+@font-face {
+  font-family: 'GenSenRounded-B';
+  src: url('../fonts/GenSenRounded-B.ttc') format('truetype');
+  font-weight: normal;  /* 或者 font-weight: bold; 根據需要 */
+  font-style: normal;   /* 或者 font-style: italic; 根據需要 */
+}
+
 body {
   background: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'GenSenRounded-H', sans-serif;
   overflow-x: hidden;
 }
 
+/* body {
+  background: #ffffff;
+  font-family: 'GenSenRounded-B', sans-serif;
+  overflow-x: hidden;
+} */
 
 
 /*---------------------------------------
