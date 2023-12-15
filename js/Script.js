@@ -1,6 +1,8 @@
 
 $('#cf-submit').on('click', function () {
 
+    event.preventDefault();
+
     var DataArray = new Array(100);
 
     DataArray[0] = 1;
