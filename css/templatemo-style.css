@@ -449,6 +449,10 @@ section {
   background-image: url(../images/Slider/yo-img-03.png);
 }
 
+.slider .item-fourth {
+  background-image: url(../images/Slider/yo-img-04.png);
+}
+
 .slider .item-second .section-btn {
   background: #292929;
 }
