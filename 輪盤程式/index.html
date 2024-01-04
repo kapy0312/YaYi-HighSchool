@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>輪盤抽獎</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="css/templatemo-style.css"> -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+</head>
+
+<body>
+  <!-- <form> -->
+  <div class="complete-banner" id="cBanner1">
+    <img src="../輪盤程式/img/兔1.png" id="Left Bottom Image" class="left-image">
+    <img src="../輪盤程式/img/兔2.png" id="Right Bottom Image" class="right-image">
+  </div>
+  <!-- </form> -->
+
+  <div class="flex-container">
+
+    <div class="item1">
+
+      <div class="Roulette" id="Roulette1"></div>
+      <div class="center-image" id="Pointer1"></div>
+      <!-- <button class="S-btn" onclick="startSpin()">抽獎</button> -->
+      <button class="btn" onclick="startSpin()">
+        抽獎
+        <span></span><span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="item2" id="it2">
+      <button class="btn" id="tSH_btn">
+        編輯選項
+        <span></span><span></span><span></span><span></span>
+      </button>
+      <textarea class="S-ta" id="myTextarea"></textarea>
+      <div class="complete-text" id="CompleteTEXT2">輪盤結果:</div>
+    </div>
+    <!-- <div class="item">2</div> -->
+  </div>
+  <!-- <button onclick="Updata()">動態更新輪盤</button> -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

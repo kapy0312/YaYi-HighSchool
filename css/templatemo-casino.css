@@ -1,0 +1,96 @@
+/* #casino body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+#casino .formRoulette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50vh; */
+}
+
+#casino.Roulette {
+  /* width: 80%; */
+  /* height: 80%; */
+  /*max-width: 500px; /*最大寬度，可根據需要調整 */
+  /*max-height: 500px; /*最大高度，可根據需要調整 */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden; /* 保证文字不溢出切片外 */
+  background: conic-gradient(
+    from 0deg,
+    #ff5757 0deg 60deg,
+    #ffd700 60deg 120deg,
+    #4caf50 120deg 180deg,
+    #3498db 180deg 240deg,
+    #8e44ad 240deg 300deg,
+    #e74c3c 300deg 360deg
+
+    /* #4caf50 0deg 360deg */
+  ); 
+  box-shadow: 0 0 0 10px #000; /* 設定粗線的寬度和顏色 */
+  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+}
+
+#casino textarea {
+  height: 500px; /* 與輪盤相同的高度 */
+  resize: none; /* 禁止改變大小 */
+  margin-bottom: 10px; /* 調整 textarea 與輪盤的距離 */
+  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+}
+
+#casino .center-image {
+  position: absolute;
+  /* top: 50%; */
+  /* left: 50%; */
+  transform: translate(-50%, -50%);
+  width: 100px; /* 調整指針圖片的大小 */
+  height: 100px;
+  background-image: url('images/pointer.png'); /* 指針圖片的路徑 */
+  background-size: cover;
+  border-radius: 0%;
+  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+}
+
+#casino .slice-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  color: white;
+  transform-origin: 0% 0%;
+}
+
+#casino button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 輪盤結束顯示動畫 */
+#casino .complete-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #373CA4; /* 橫條的顏色 */
+  height: 200px;
+  width: 100%;
+  display: block; /* 初始隱藏 */
+  transition: opacity 1s ease; /* 定義過渡效果，0.5秒的淡入淡出效果 */
+  z-index: 1; /* 設定堆疊順序，使其在最上層 */
+}
+
+#casino .complete-text {
+  font-size: 24px;
+  color: #fff; /* 字的顏色 */
+  position: absolute;
+}
