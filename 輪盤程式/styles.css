@@ -47,12 +47,18 @@ form {
   overflow: hidden; /* 保证文字不溢出切片外 */
   background: conic-gradient(
     from 0deg,
-    #ff5757 0deg 60deg,
+    /* #ff5757 0deg 60deg,
     #ffd700 60deg 120deg,
     #4caf50 120deg 180deg,
     #3498db 180deg 240deg,
     #8e44ad 240deg 300deg,
-    #e74c3c 300deg 360deg
+    #e74c3c 300deg 360deg */
+    #FFFFFF 0deg 60deg,
+    #FFFFFF 60deg 120deg,
+    #FFFFFF 120deg 180deg,
+    #FFFFFF 180deg 240deg,
+    #FFFFFF 240deg 300deg,
+    #FFFFFF 300deg 360deg
 
     /* #4caf50 0deg 360deg */
   ); 
