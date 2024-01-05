@@ -1,11 +1,3 @@
-/* #casino body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-} */
 
 #casino .formRoulette {
   display: flex;
@@ -93,4 +85,220 @@
   font-size: 24px;
   color: #fff; /* 字的顏色 */
   position: absolute;
+}
+
+
+/* 角子老虎機 拉霸 */
+/* ---------------------------------------------------------------------- */
+#slotMachine {
+  display: flex;
+  justify-content: space-around;
+  /* margin-top: 20px; */
+  justify-content: center; /* 在水平方向上置中 */
+  align-items: center; /* 在垂直方向上置中 */
+  overflow: hidden;
+}
+
+.slot {
+  width: 200px;
+  height: 100px;
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  position: relative;
+  animation: none;
+  /* 初始時沒有動畫 */
+}
+
+@keyframes moveDown {
+  0% {
+      transform: translateY(-100%);
+  }
+
+  100% {
+      transform: translateY(100%);
+  }
+}
+
+.moveDown {
+  animation: moveDown 0.1s ease-out infinite;
+}
+
+.slotM,
+.slotM:focus {
+    display: block;
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
+    color: #ed1c5b;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 10px 20px;
+    margin: 10px 0px;
+}
+.slotM:before,
+.slotM:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+.slotM:hover {
+    color: #333333;
+    transition-delay: .5s;
+}
+.slotM:hover:before {
+    transition-delay: 0s;
+}
+.slotM:hover:after {
+    background: #ed1c5b;
+    transition-delay: .35s;
+}
+.slotM.from-top:before,
+.slotM.from-top:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+.slotM.from-top:before {
+    bottom: 0;
+    border: 1px solid #ed1c5b;
+    border-top: 0;
+    border-bottom: 0;
+}
+.slotM.from-top:after {
+    top: 0;
+    height: 0;
+}
+.slotM.from-top:hover:before,
+.slotM.from-top:hover:after {
+    height: 100%;
+}
+.slotM.from-bottom:before,
+.slotM.from-bottom:after {
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+.slotM.from-bottom:before {
+    top: 0;
+    border: 1px solid #ed1c5b;
+    border-top: 0;
+    border-bottom: 0;
+}
+.slotM.from-bottom:after {
+    bottom: 0;
+    height: 0;
+}
+.slotM.from-bottom:hover:before,
+.slotM.from-bottom:hover:after {
+    height: 100%;
+}
+.slotM.from-left:before,
+.slotM.from-left:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+.slotM.from-left:before {
+    right: 0;
+    border: 1px solid #ed1c5b;
+    border-left: 0;
+    border-right: 0;
+}
+.slotM.from-left:after {
+    left: 0;
+}
+.slotM.from-left:hover:before,
+.slotM.from-left:hover:after {
+    width: 100%;
+}
+.slotM.from-right:before,
+.slotM.from-right:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+}
+.slotM.from-right:before {
+    left: 0;
+    border: 1px solid #ed1c5b;
+    border-left: 0;
+    border-right: 0;
+}
+.slotM.from-right:after {
+    right: 0;
+}
+.slotM.from-right:hover:before,
+.slotM.from-right:hover:after {
+    width: 100%;
+}
+.slotM.from-center:before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid #ed1c5b;
+    border-left: 0;
+    border-right: 0;
+}
+.slotM.from-center:after {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #ed1c5b;
+}
+.slotM.from-center:hover:before {
+    left: 0;
+    width: 100%;
+}
+.slotM.from-center:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.rbtn,
+.rbtn:hover,
+.rbtn:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background: #ed1c5b;
+    color: #1a1a1a;
+    font-size: 2rem;
+    transition: box-shadow 400ms cubic-bezier(0.2, 0, 0.7, 1), transform 200ms cubic-bezier(0.2, 0, 0.7, 1);
+}
+.rbtn:hover {
+    transform: rotate(45deg);
+    box-shadow: 0 0 1px 15px rgba(138, 59, 88, 0.4), 0 0 1px 30px rgba(138, 59, 88, 0.1), 0 0 1px 45px rgba(138, 59, 88, 0.1);
+}
+
+.S-ta {
+  border:0;
+  border-radius:5px;
+  /* background-color:rgba(241,241,241,98); */
+  /* background-color: #ebafd1; */
+  /* width:355px; */
+  /* height:100px; */
+  align-items: center;
+  justify-content: center;
+  /* padding:10px; */
+  width: 300px; /*與輪盤相同的高度 */
+  height: 350px; /* 與輪盤相同的高度 */
+  resize: none; /* 禁止改變大小 */
+  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+  position: relative;
+  font-family: 'GenSenRounded-H', sans-serif;
 }
