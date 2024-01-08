@@ -203,8 +203,8 @@ form {
 }
 
 .complete-text {
-  font-size: 30px;
-  background-color: #FFFFFF;
+  font-size: 48px;
+  /* background-color: #FFFFFF; */
   color: #281F04; /* 字的顏色 */
   position: absolute;
   white-space: pre-line;
