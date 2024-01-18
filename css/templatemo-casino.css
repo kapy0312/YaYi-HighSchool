@@ -1,129 +1,143 @@
-
 #casino .formRoulette {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 50vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 50vh; */
 }
 
 #casino.Roulette {
-  /* width: 80%; */
-  /* height: 80%; */
-  /*max-width: 500px; /*最大寬度，可根據需要調整 */
-  /*max-height: 500px; /*最大高度，可根據需要調整 */
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden; /* 保证文字不溢出切片外 */
-  background: conic-gradient(
-    from 0deg,
-    #ff5757 0deg 60deg,
-    #ffd700 60deg 120deg,
-    #4caf50 120deg 180deg,
-    #3498db 180deg 240deg,
-    #8e44ad 240deg 300deg,
-    #e74c3c 300deg 360deg
-
-    /* #4caf50 0deg 360deg */
-  ); 
-  box-shadow: 0 0 0 10px #000; /* 設定粗線的寬度和顏色 */
-  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+    /* width: 80%; */
+    /* height: 80%; */
+    /*max-width: 500px; /*最大寬度，可根據需要調整 */
+    /*max-height: 500px; /*最大高度，可根據需要調整 */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    /* 保证文字不溢出切片外 */
+    background: conic-gradient(from 0deg,
+            #ff5757 0deg 60deg,
+            #ffd700 60deg 120deg,
+            #4caf50 120deg 180deg,
+            #3498db 180deg 240deg,
+            #8e44ad 240deg 300deg,
+            #e74c3c 300deg 360deg
+            /* #4caf50 0deg 360deg */
+        );
+    box-shadow: 0 0 0 10px #000;
+    /* 設定粗線的寬度和顏色 */
+    z-index: 2;
+    /* 設定堆疊順序，使其在最下層 */
 }
 
 #casino textarea {
-  height: 500px; /* 與輪盤相同的高度 */
-  resize: none; /* 禁止改變大小 */
-  margin-bottom: 10px; /* 調整 textarea 與輪盤的距離 */
-  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+    height: 500px;
+    /* 與輪盤相同的高度 */
+    resize: none;
+    /* 禁止改變大小 */
+    margin-bottom: 10px;
+    /* 調整 textarea 與輪盤的距離 */
+    z-index: 2;
+    /* 設定堆疊順序，使其在最下層 */
 }
 
 #casino .center-image {
-  position: absolute;
-  /* top: 50%; */
-  /* left: 50%; */
-  transform: translate(-50%, -50%);
-  width: 100px; /* 調整指針圖片的大小 */
-  height: 100px;
-  background-image: url('images/pointer.png'); /* 指針圖片的路徑 */
-  background-size: cover;
-  border-radius: 0%;
-  z-index: 2; /* 設定堆疊順序，使其在最下層 */
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%, -50%);
+    width: 100px;
+    /* 調整指針圖片的大小 */
+    height: 100px;
+    background-image: url('images/pointer.png');
+    /* 指針圖片的路徑 */
+    background-size: cover;
+    border-radius: 0%;
+    z-index: 2;
+    /* 設定堆疊順序，使其在最下層 */
 }
 
 #casino .slice-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 24px;
-  color: white;
-  transform-origin: 0% 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    color: white;
+    transform-origin: 0% 0%;
 }
 
 #casino button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 /* 輪盤結束顯示動畫 */
 #casino .complete-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #373CA4; /* 橫條的顏色 */
-  height: 200px;
-  width: 100%;
-  display: block; /* 初始隱藏 */
-  transition: opacity 1s ease; /* 定義過渡效果，0.5秒的淡入淡出效果 */
-  z-index: 1; /* 設定堆疊順序，使其在最上層 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #373CA4;
+    /* 橫條的顏色 */
+    height: 200px;
+    width: 100%;
+    display: block;
+    /* 初始隱藏 */
+    transition: opacity 1s ease;
+    /* 定義過渡效果，0.5秒的淡入淡出效果 */
+    z-index: 1;
+    /* 設定堆疊順序，使其在最上層 */
 }
 
 #casino .complete-text {
-  font-size: 24px;
-  color: #fff; /* 字的顏色 */
-  position: absolute;
+    font-size: 24px;
+    color: #fff;
+    /* 字的顏色 */
+    position: absolute;
 }
 
 
 /* 角子老虎機 拉霸 */
 /* ---------------------------------------------------------------------- */
 #slotMachine {
-  display: flex;
-  justify-content: space-around;
-  /* margin-top: 20px; */
-  justify-content: center; /* 在水平方向上置中 */
-  align-items: center; /* 在垂直方向上置中 */
-  overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+    justify-content: center;
+    /* 在水平方向上置中 */
+    align-items: center;
+    /* 在垂直方向上置中 */
+    overflow: hidden;
 }
 
 .slot {
-  width: 200px;
-  height: 100px;
-  /* border: 1px solid #000; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  position: relative;
-  animation: none;
-  /* 初始時沒有動畫 */
+    width: 200px;
+    height: 100px;
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+    animation: none;
+    /* 初始時沒有動畫 */
 }
 
 @keyframes moveDown {
-  0% {
-      transform: translateY(-100%);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
 
-  100% {
-      transform: translateY(100%);
-  }
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 .moveDown {
-  animation: moveDown 0.1s ease-out infinite;
+    animation: moveDown 0.1s ease-out infinite;
 }
 
 .slotM,
@@ -142,6 +156,7 @@
     padding: 10px 20px;
     margin: 10px 0px;
 }
+
 .slotM:before,
 .slotM:after {
     content: '';
@@ -149,95 +164,115 @@
     transition: inherit;
     z-index: -1;
 }
+
 .slotM:hover {
     color: #333333;
     transition-delay: .5s;
 }
+
 .slotM:hover:before {
     transition-delay: 0s;
 }
+
 .slotM:hover:after {
     background: #ed1c5b;
     transition-delay: .35s;
 }
+
 .slotM.from-top:before,
 .slotM.from-top:after {
     left: 0;
     height: 0;
     width: 100%;
 }
+
 .slotM.from-top:before {
     bottom: 0;
     border: 1px solid #ed1c5b;
     border-top: 0;
     border-bottom: 0;
 }
+
 .slotM.from-top:after {
     top: 0;
     height: 0;
 }
+
 .slotM.from-top:hover:before,
 .slotM.from-top:hover:after {
     height: 100%;
 }
+
 .slotM.from-bottom:before,
 .slotM.from-bottom:after {
     left: 0;
     height: 0;
     width: 100%;
 }
+
 .slotM.from-bottom:before {
     top: 0;
     border: 1px solid #ed1c5b;
     border-top: 0;
     border-bottom: 0;
 }
+
 .slotM.from-bottom:after {
     bottom: 0;
     height: 0;
 }
+
 .slotM.from-bottom:hover:before,
 .slotM.from-bottom:hover:after {
     height: 100%;
 }
+
 .slotM.from-left:before,
 .slotM.from-left:after {
     top: 0;
     width: 0;
     height: 100%;
 }
+
 .slotM.from-left:before {
     right: 0;
     border: 1px solid #ed1c5b;
     border-left: 0;
     border-right: 0;
 }
+
 .slotM.from-left:after {
     left: 0;
 }
+
 .slotM.from-left:hover:before,
 .slotM.from-left:hover:after {
     width: 100%;
 }
+
 .slotM.from-right:before,
 .slotM.from-right:after {
     top: 0;
     width: 0;
     height: 100%;
 }
+
 .slotM.from-right:before {
     left: 0;
     border: 1px solid #ed1c5b;
     border-left: 0;
     border-right: 0;
 }
+
 .slotM.from-right:after {
     right: 0;
 }
+
 .slotM.from-right:hover:before,
 .slotM.from-right:hover:after {
     width: 100%;
 }
+
 .slotM.from-center:before {
     top: 0;
     left: 50%;
@@ -247,6 +282,7 @@
     border-left: 0;
     border-right: 0;
 }
+
 .slotM.from-center:after {
     bottom: 0;
     left: 0;
@@ -254,10 +290,12 @@
     width: 100%;
     background: #ed1c5b;
 }
+
 .slotM.from-center:hover:before {
     left: 0;
     width: 100%;
 }
+
 .slotM.from-center:hover:after {
     top: 0;
     height: 100%;
@@ -280,25 +318,260 @@
     font-size: 2rem;
     transition: box-shadow 400ms cubic-bezier(0.2, 0, 0.7, 1), transform 200ms cubic-bezier(0.2, 0, 0.7, 1);
 }
+
 .rbtn:hover {
     transform: rotate(45deg);
     box-shadow: 0 0 1px 15px rgba(138, 59, 88, 0.4), 0 0 1px 30px rgba(138, 59, 88, 0.1), 0 0 1px 45px rgba(138, 59, 88, 0.1);
 }
 
 .S-ta {
-  border:0;
-  border-radius:5px;
-  /* background-color:rgba(241,241,241,98); */
-  /* background-color: #ebafd1; */
-  /* width:355px; */
-  /* height:100px; */
-  align-items: center;
-  justify-content: center;
-  /* padding:10px; */
-  width: 300px; /*與輪盤相同的高度 */
-  height: 350px; /* 與輪盤相同的高度 */
-  resize: none; /* 禁止改變大小 */
-  z-index: 2; /* 設定堆疊順序，使其在最下層 */
-  position: relative;
-  font-family: 'GenSenRounded-H', sans-serif;
+    border: 0;
+    border-radius: 5px;
+    /* background-color:rgba(241,241,241,98); */
+    /* background-color: #ebafd1; */
+    /* width:355px; */
+    /* height:100px; */
+    align-items: center;
+    justify-content: center;
+    /* padding:10px; */
+    width: 300px;
+    /*與輪盤相同的高度 */
+    height: 350px;
+    /* 與輪盤相同的高度 */
+    resize: none;
+    /* 禁止改變大小 */
+    z-index: 2;
+    /* 設定堆疊順序，使其在最下層 */
+    position: relative;
+    font-family: 'GenSenRounded-H', sans-serif;
+}
+
+/* 兔兔人抽牌占卜 */
+/* ------------------------------------------------------------------ */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    /* justify-content: flex-end; */
+    align-items: center;
+    /* align-items: flex-end; */
+    width: 400px;
+    height: 200px;
+}
+
+/* #cardContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 150px;
+} */
+
+.sidebar {
+    width: 200px;
+    height: 300px;
+    /* background-image: url('img/front-image.png'); */
+    overflow: hidden;
+}
+
+.box {
+    margin: 50px auto;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    /*3D效果 */
+    transition: 1s ease;
+}
+
+.card {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /*表示隱藏被旋轉div元素的背面，這樣旋轉之後，第一張卡片是背面朝螢幕方向，看不到，第二張卡片旋轉之後則是正面朝像螢幕，即形成了旋轉的效果。 */
+    border-radius: 20px;
+}
+
+.front1 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-01.png');
+    background-size: cover;
+}
+
+.front2 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-02.png');
+    background-size: cover;
+}
+
+.front3 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-03.png');
+    background-size: cover;
+}
+
+.front4 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-04.png');
+    background-size: cover;
+}
+
+.front5 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-05.png');
+    background-size: cover;
+}
+
+.front6 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-06.png');
+    background-size: cover;
+}
+
+.front7 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-07.png');
+    background-size: cover;
+}
+
+.front8 {
+    transform: rotateY(180deg);
+    background-image: url('images/Divination/front-08.png');
+    background-size: cover;
+}
+
+
+.back1 {
+    /*繞著Y軸旋轉*/
+    /* transform: rotateY(180deg); */
+    background-image: url('images/Divination/back-00.png');
+    background-size: cover;
+}
+
+.flipped {
+    /* transform: translateY(-200px) rotateY(180deg); 繞著Y軸旋轉*/
+    animation: moveUpAndFlip 3s ease forwards;
+}
+
+/* @keyframes moveUpAndFlip {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0px) rotateY(180deg);
+    }
+} */
+
+
+@keyframes moveUpAndFlip {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(-50px) rotateY(180deg);
+    }
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.display-card {
+    width: 200px;
+    height: 300px;
+    background-image: url('images/Divination/front-image.png');
+    background-size: cover;
+    display: none;
+    /* 初始設置為不可見 */
+}
+
+.drbtn,
+.drbtn:focus,
+.drbtn:hover {
+    display: inline-block;
+    position: relative;
+    min-width: 200px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff0081;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    padding: 10px 20px;
+}
+.drbtn:before,
+.drbtn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+.drbtn:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.drbtn:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.drbtn:active {
+    transform: scale(0.9);
+    background-color: #e60074;
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.drbtn:active:before {
+    display: block;
+    animation: anim-top ease-in-out 0.75s forwards;
+}
+.drbtn:active:after {
+    display: block;
+    animation: anim-bottom ease-in-out 0.75s forwards;
+}
+@keyframes anim-top {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+@keyframes anim-bottom {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }

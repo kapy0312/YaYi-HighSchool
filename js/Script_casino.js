@@ -14,11 +14,15 @@ window.onload = function () {
     rframe.style.height = '1000px';
   }
 
-  
+
   textarea.value += '我是選項1\n我是選項4\n我是選項3\n我是選項4';
+
+  //兔兔人抽牌占卜
+  $('.back1').css('background-image', `url('images/Divination/back-00.png')`);
 };
 
 //角子老虎機 拉霸
+//------------------------------------------------------------------------
 //------------------------------------------------------------------------
 document.getElementById('slot1').innerText = rList[getRandomNumber()];
 
@@ -55,7 +59,50 @@ function startSlotMachine() {
 textarea.addEventListener('input', function () {
   rList = textarea.value.split('\n');
   numList = rList.length;
-  if(numList>0){
+  if (numList > 0) {
     document.getElementById('slot1').innerText = rList[0];
   }
 });
+
+//兔兔人抽牌占卜
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+// Initialize array with values 0 to 7
+var cardArray = Array.from({ length: 8 }, (_, index) => index);
+shuffleArray(cardArray);// Shuffle the array
+
+
+function flipCard(cardNumber) {
+  // var box = $(`.box:nth-child(${cardNumber + 1})`);
+  var box = $('#box' + cardNumber);
+  $('.front' + cardNumber).css('background-image', `url('images/Divination/front-` + (cardArray[cardNumber - 1] + 1).toString().padStart(2, '0') + `.png')`);
+
+  // $('.display-card').hide();
+  // 淡出元素
+  $('.display-card').fadeOut('slow');
+  box.addClass("flipped");
+
+  // 偵聽動畫結束事件，以便在動畫完成後移除 flipped 類別
+  box.on('animationend', function () {
+    // box.removeClass("flipped");
+
+    // $('.display-card').show(); // 顯示元素
+    // 淡入元素
+    $('.display-card').fadeIn('slow');
+    $('.display-card').css('background-image', `url('images/Divination/front-` + (cardArray[cardNumber - 1] + 1).toString().padStart(2, '0') + `.png')`);
+  });
+}
+
+// Fisher-Yates Shuffle Algorithm
+function CardReset() {
+  $('#box1').removeClass("flipped");
+  $('#box2').removeClass("flipped");
+  $('#box3').removeClass("flipped");
+  $('#box4').removeClass("flipped");
+  $('#box5').removeClass("flipped");
+  $('#box6').removeClass("flipped");
+  $('#box7').removeClass("flipped");
+  $('#box8').removeClass("flipped");
+  $('.display-card').fadeOut('slow');
+  shuffleArray(cardArray);// Shuffle the array
+}
